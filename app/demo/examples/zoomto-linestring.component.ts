@@ -18,7 +18,7 @@ import { LngLatBounds } from 'maplibre-gl';
       [fitBoundsOptions]="{
         padding: 20
       }"
-      [preserveDrawingBuffer]="true"
+      [canvasContextAttributes]="{preserveDrawingBuffer: true}"
     >
       <mgl-control>
         <button
@@ -47,7 +47,6 @@ import { LngLatBounds } from 'maplibre-gl';
   `,
   styleUrls: ['./examples.css'],
   preserveWhitespaces: false,
-  standalone: true,
   imports: [MapComponent, ControlComponent, MatButtonModule, LayerComponent],
 })
 export class ZoomtoLinestringComponent {

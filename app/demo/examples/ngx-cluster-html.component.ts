@@ -39,7 +39,6 @@ import { MatListModule } from '@angular/material/list';
       (page)="changePage($event)"
     ></mat-paginator>
   `,
-  standalone: true,
   imports: [MatListModule, MatPaginatorModule],
 })
 export class ClusterPopupComponent implements OnChanges {
@@ -93,7 +92,7 @@ export class ClusterPopupComponent implements OnChanges {
       "
       [zoom]="[3]"
       [center]="[-103.59179687498357, 40.66995747013945]"
-      [preserveDrawingBuffer]="true"
+      [canvasContextAttributes]="{preserveDrawingBuffer: true}"
     >
       @if (earthquakes(); as earthquakesValue) {
       <mgl-geojson-source
@@ -127,7 +126,6 @@ export class ClusterPopupComponent implements OnChanges {
     </mgl-map>
   `,
   styleUrls: ['./examples.css', './ngx-cluster-html.component.css'],
-  standalone: true,
   imports: [
     MapComponent,
     GeoJSONSourceComponent,

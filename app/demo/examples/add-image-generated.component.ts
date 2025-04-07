@@ -12,7 +12,7 @@ import {
       [style]="
         'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL'
       "
-      [preserveDrawingBuffer]="true"
+      [canvasContextAttributes]="{preserveDrawingBuffer: true}"
     >
       <mgl-image
         id="gradient"
@@ -47,7 +47,6 @@ import {
     </mgl-map>
   `,
   styleUrls: ['./examples.css'],
-  standalone: true,
   imports: [MapComponent, ImageComponent, LayerComponent],
 })
 export class AddImageGeneratedComponent implements OnInit {

@@ -10,7 +10,7 @@ import { MapComponent, LayerComponent } from '@maplibre/ngx-maplibre-gl';
       "
       [zoom]="[15]"
       [center]="[-122.486052, 37.830348]"
-      [preserveDrawingBuffer]="true"
+      [canvasContextAttributes]="{preserveDrawingBuffer: true}"
     >
       <mgl-layer
         id="route"
@@ -61,7 +61,6 @@ import { MapComponent, LayerComponent } from '@maplibre/ngx-maplibre-gl';
     </mgl-map>
   `,
   styleUrls: ['./examples.css'],
-  standalone: true,
   imports: [MapComponent, LayerComponent],
 })
 export class GeoJSONLineComponent {}

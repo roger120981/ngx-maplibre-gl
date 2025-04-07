@@ -16,7 +16,7 @@ import {
       "
       [zoom]="[2]"
       [center]="[0, 0]"
-      [preserveDrawingBuffer]="true"
+      [canvasContextAttributes]="{preserveDrawingBuffer: true}"
     >
       <mgl-marker
         [lngLat]="[0, 0]"
@@ -34,7 +34,6 @@ import {
     </mgl-map>
   `,
   styleUrls: ['./examples.css'],
-  standalone: true,
   imports: [MapComponent, MarkerComponent, ControlComponent, MatCardModule],
 })
 export class DragAMarkerComponent {

@@ -14,7 +14,7 @@ import {
       "
       [zoom]="[2]"
       [center]="[-100.486052, 37.830348]"
-      [preserveDrawingBuffer]="true"
+      [canvasContextAttributes]="{preserveDrawingBuffer: true}"
     >
       <mgl-geojson-source
         id="states"
@@ -57,7 +57,6 @@ import {
     </mgl-map>
   `,
   styleUrls: ['./examples.css'],
-  standalone: true,
   imports: [MapComponent, GeoJSONSourceComponent, LayerComponent],
 })
 export class HoverStylesComponent {

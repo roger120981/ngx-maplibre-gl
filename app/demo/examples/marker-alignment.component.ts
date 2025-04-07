@@ -14,7 +14,7 @@ import { MapComponent, MarkerComponent } from '@maplibre/ngx-maplibre-gl';
       [bearing]="[bearing]"
       [zoom]="[17]"
       [center]="[4.577979, 51.038189]"
-      [preserveDrawingBuffer]="true"
+      [canvasContextAttributes]="{preserveDrawingBuffer: true}"
     >
       <mgl-marker
         [lngLat]="[4.577979, 51.03816]"
@@ -41,7 +41,6 @@ import { MapComponent, MarkerComponent } from '@maplibre/ngx-maplibre-gl';
     </mgl-map>
   `,
   styleUrls: ['./examples.css', './marker-alignment.component.css'],
-  standalone: true,
   imports: [MapComponent, MarkerComponent],
 })
 export class MarkerAlignmentComponent implements OnDestroy {

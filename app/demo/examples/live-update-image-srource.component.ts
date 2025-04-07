@@ -22,7 +22,7 @@ import data from './hike.geo.json';
       [center]="center"
       [zoom]="[14]"
       movingMethod="jumpTo"
-      [preserveDrawingBuffer]="true"
+      [canvasContextAttributes]="{preserveDrawingBuffer: true}"
     >
       <mgl-image-source
         id="test_source"
@@ -41,7 +41,6 @@ import data from './hike.geo.json';
     </mgl-map>
   `,
   styleUrls: ['./examples.css'],
-  standalone: true,
   imports: [MapComponent, ImageSourceComponent, LayerComponent],
 })
 export class LiveUpdateImageSourceComponent implements OnDestroy {

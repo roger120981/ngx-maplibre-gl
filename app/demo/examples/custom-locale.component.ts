@@ -18,7 +18,7 @@ import {
       [center]="[36.235656, 50.00387]"
       [zoom]="[11.15]"
       [locale]="locale"
-      [preserveDrawingBuffer]="true"
+      [canvasContextAttributes]="{preserveDrawingBuffer: true}"
     >
       <mgl-control mglFullscreen position="top-left"></mgl-control>
       <mgl-control mglGeolocate position="top-left"></mgl-control>
@@ -27,7 +27,6 @@ import {
     </mgl-map>
   `,
   styleUrls: ['./examples.css'],
-  standalone: true,
   imports: [
     MapComponent,
     ControlComponent,

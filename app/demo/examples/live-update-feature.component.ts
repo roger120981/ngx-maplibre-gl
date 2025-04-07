@@ -18,7 +18,7 @@ import data from './hike.geo.json';
       [centerWithPanTo]="true"
       [pitch]="pitch"
       movingMethod="jumpTo"
-      [preserveDrawingBuffer]="true"
+      [canvasContextAttributes]="{preserveDrawingBuffer: true}"
     >
       @if (data) {
         <mgl-geojson-source id="trace" [data]="data"> </mgl-geojson-source>
@@ -37,7 +37,6 @@ import data from './hike.geo.json';
     </mgl-map>
   `,
   styleUrls: ['./examples.css'],
-  standalone: true,
   imports: [MapComponent, GeoJSONSourceComponent, LayerComponent],
 })
 export class LiveUpdateFeatureComponent implements OnDestroy {

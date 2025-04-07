@@ -32,12 +32,11 @@ import { MapComponent } from '@maplibre/ngx-maplibre-gl';
       }"
       [zoom]="[9]"
       [center]="[137.9150899566626, 36.25956997955441]"
-      [preserveDrawingBuffer]="true"
+      [canvasContextAttributes]="{preserveDrawingBuffer: true}"
     >
     </mgl-map>
   `,
   styleUrls: ['./examples.css'],
-  standalone: true,
   imports: [MapComponent],
 })
 export class SatelliteMapComponent {}

@@ -15,7 +15,7 @@ import {
       [style]="style"
       [zoom]="[13]"
       [center]="[4.899, 52.372]"
-      [preserveDrawingBuffer]="true"
+      [canvasContextAttributes]="{preserveDrawingBuffer: true}"
       data-cy="mgl-map"
     >
     </mgl-map>
@@ -34,7 +34,6 @@ import {
     </mat-radio-group>
   `,
   styleUrls: ['./examples.css', './set-style.component.css'],
-  standalone: true,
   imports: [MapComponent, MatRadioModule, FormsModule],
 })
 export class SetStyleComponent implements OnInit {

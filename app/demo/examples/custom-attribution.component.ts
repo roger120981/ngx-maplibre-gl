@@ -15,7 +15,7 @@ import {
       [center]="[-77.04, 38.907]"
       [zoom]="[11.15]"
       [attributionControl]="false"
-      [preserveDrawingBuffer]="true"
+      [canvasContextAttributes]="{preserveDrawingBuffer: true}"
     >
       <mgl-control
         mglAttribution
@@ -28,7 +28,6 @@ import {
     </mgl-map>
   `,
   styleUrls: ['./examples.css'],
-  standalone: true,
   imports: [MapComponent, ControlComponent, AttributionControlDirective],
 })
 export class CustomAttributionComponent {}

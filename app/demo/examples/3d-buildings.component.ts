@@ -14,7 +14,7 @@ import { MapComponent, LayerComponent } from '@maplibre/ngx-maplibre-gl';
       [pitch]="45"
       [bearing]="-17.6"
       (mapLoad)="onLoad($event)"
-      [preserveDrawingBuffer]="true"
+      [canvasContextAttributes]="{preserveDrawingBuffer: true}"
     >
       <mgl-layer
         id="3d-buildings"
@@ -50,7 +50,6 @@ import { MapComponent, LayerComponent } from '@maplibre/ngx-maplibre-gl';
     </mgl-map>
   `,
   styleUrls: ['./examples.css'],
-  standalone: true,
   imports: [MapComponent, LayerComponent],
 })
 export class Display3dBuildingsComponent {

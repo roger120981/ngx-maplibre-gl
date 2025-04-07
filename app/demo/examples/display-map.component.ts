@@ -10,11 +10,10 @@ import { MapComponent } from '@maplibre/ngx-maplibre-gl';
       "
       [zoom]="[9]"
       [center]="[-74.5, 40]"
-      [preserveDrawingBuffer]="true"
+      [canvasContextAttributes]="{preserveDrawingBuffer: true}"
     ></mgl-map>
   `,
   styleUrls: ['./examples.css'],
-  standalone: true,
   imports: [MapComponent],
 })
 export class DisplayMapComponent {}

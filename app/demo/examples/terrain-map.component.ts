@@ -14,7 +14,7 @@ import {
       [center]="[11.39085, 47.27574]"
       [pitch]="52"
       [terrain]="terrainSpec"
-      [preserveDrawingBuffer]="true"
+      [canvasContextAttributes]="{preserveDrawingBuffer: true}"
     >
       <mgl-raster-dem-source
         id="terrainSource"
@@ -24,7 +24,6 @@ import {
     </mgl-map>
   `,
   styleUrls: ['./examples.css'],
-  standalone: true,
   imports: [MapComponent, RasterDemSourceComponent],
 })
 export class TerrainMapComponent {

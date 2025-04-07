@@ -17,7 +17,7 @@ import {
       [zoom]="[11.15]"
       [center]="[-77.04, 38.907]"
       [cursorStyle]="cursorStyle"
-      [preserveDrawingBuffer]="true"
+      [canvasContextAttributes]="{preserveDrawingBuffer: true}"
     >
       <mgl-geojson-source id="points" [data]="points"></mgl-geojson-source>
       <mgl-layer
@@ -40,7 +40,6 @@ import {
     </mgl-map>
   `,
   styleUrls: ['./examples.css'],
-  standalone: true,
   imports: [
     MapComponent,
     GeoJSONSourceComponent,

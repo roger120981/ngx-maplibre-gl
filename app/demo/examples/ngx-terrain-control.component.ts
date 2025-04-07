@@ -17,7 +17,7 @@ import {
       [zoom]="[12]"
       [center]="[11.39085, 47.27574]"
       [pitch]="52"
-      [preserveDrawingBuffer]="true"
+      [canvasContextAttributes]="{preserveDrawingBuffer: true}"
     >
       <mgl-raster-dem-source
         id="terrainSource"
@@ -40,7 +40,6 @@ import {
   `,
   styleUrls: ['./examples.css'],
   preserveWhitespaces: false,
-  standalone: true,
   imports: [
     MapComponent,
     RasterDemSourceComponent,
